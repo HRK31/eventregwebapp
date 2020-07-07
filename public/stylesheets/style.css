@@ -1,0 +1,561 @@
+/*body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-weight: lighter;
+}
+
+/*background-image*/
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(https://i.pinimg.com/originals/81/5d/89/815d895b4721c14cbe7c86c63806d6c8.gif) no-repeat center center;
+  background-size: cover;
+}
+
+/*About Section*/
+.content {
+  width: 94%;
+  margin: 4em auto;
+  font-size: 20px;
+  line-height: 30px;
+  /*height between the lines*/
+  text-align: justify;
+  /* equal margin from left & right*/
+}
+
+/* only the LOGO*/
+.logo {
+  line-height: 60px;
+  position: fixed;
+  float: left;
+  margin: 16px 46px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  line-height: 60px;
+  /*no background-color for transparent-nav*/
+}
+
+nav ul {
+  line-height: 60px;
+  list-style: none;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  /*hides nav elements while switching to mobile view*/
+  color: #fff;
+  padding: 0;
+  text-align: right;
+  margin: 0;
+  padding-right: 40px;
+  transition: 1s;
+  /*slowly opens nav on mobile view */
+}
+
+nav.black ul {
+  /*to change navBar color on scroll down */
+  background: #000;
+}
+
+nav ul li {
+  /*navBar elements list */
+  display: inline-block;
+  padding: 16px 40px;
+  ;
+}
+
+nav ul li a {
+  /*navBar elements */
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.menu-icon {
+  /* toggleButton settings*/
+  line-height: 60px;
+  width: 100%;
+  background: #000;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+
+}
+
+@media (max-width: 750px) {
+
+  .logo {
+    /*logo text setting */
+    position: fixed;
+    top: 0;
+    margin-top: 16px;
+  }
+
+  nav ul {
+    /* navBar setting*/
+    max-height: 0px;
+    background: #000;
+  }
+
+  nav.black ul {
+    background: #000;
+  }
+
+  .showing {
+    /* class to toggle using jQuerry*/
+    max-height: 34em;
+  }
+
+  nav ul li {
+    /* navBar elements*/
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .menu-icon {
+    /* toggle-buttton*/
+    display: block;
+    color: whitesmoke;
+    font-size: 2em;
+  }
+
+
+  .dropdown-content {
+    /* sets dropdwon content*/
+    display: relative;
+    left: 40%;
+    background-color: black;
+
+
+    z-index: 1;
+
+  }
+
+
+
+
+}
+
+.menu li a:hover {
+  /* color of navBar elmnts on hover*/
+
+  color: #fe019a;
+}
+
+.hlinks:hover {
+   /*fixed a bug*/
+  cursor: pointer;
+  color: #fe019a;
+}
+
+.links::after {
+  /*adds the underline animation on navBar elemnts */
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fe019a;
+  transition: width 0.3s;
+}
+
+.links:hover::after {
+  /*on HOver::adds the underline animation on navBar elemnts */
+  width: 110%;
+  /*relative to parent i.e. navBar elemnts */
+  transition: width 0.3s;
+}
+
+/*same for sub links*/
+.sub-links::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fe019a;
+  transition: width 0.3s;
+}
+
+.sub-links:hover::after {
+  width: 50%;
+  transition: width 0.3s;
+}
+
+
+/* for hoverbale dropdown sub events.........*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: none;
+  min-width: 120px;
+
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  text-align: left;
+  height: 42px;
+  width: 120px;
+
+  display: block;
+  line-height: 1em;
+}
+
+.hlinks:hover .dropdown-content {
+  display: block;
+}
+
+/*......hoverrable dropdown ends*/
+
+
+
+
+#overImg {
+  /*text over the image */
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  padding:10px;
+  transform: translate(-50%, -50%);
+  margin-right: 20%;;
+ font-size:30px;
+ color:  #fe019a;
+ /*background-color:yellow;*/
+ /*	text-shadow:0 2px 5px rgba(0,0,0,0.5);
+	/*font-family: 'VT323', monospace;*/
+	font-family: 'Pacifico', cursive;
+	text-shadow:4px 4px 4px #aaa;
+	font-weight:bolder;
+}
+
+.register {
+  /*register btn over the image */
+  position: absolute;
+  top: 40%;
+  
+
+   right:0px;
+  margin:80px;
+ 
+}
+ /* #over{
+	  display: flex;
+    flex-wrap: wrap;
+   	flex-direction: column;
+	   justify-content:space-between;
+   	
+     }---------  content not working-------------------*/
+
+/*rgister btn effect-------------------------*/
+#register a{
+	padding:20px 40px;
+	color:#fff;
+ box-sizing:border-box;
+ background:linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+ background-size:400%;
+ border-radius:30px;
+ text-decoration:none;
+ z-index:1;
+}
+
+#register a:hover{
+	animation:animate 3s linear infinite;
+}
+@keyframes animate
+{
+	 0%{
+	 	background-position:0%;
+	 }
+	 100%{
+	 		background-position:400%;
+	 }
+}
+/*
+#register a:before{
+	content:'';
+	position:absolute;  
+	top:-5px;
+	left:-5px;
+	bottom:-5px;
+	z-index:-1;
+	background:linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+ background-size:400%;
+ border-radius:30px;
+ opacity:0;
+ transition:0.5s;
+ }
+
+#register a:hover:before{
+	filter:blur(20px);
+	opacity:1;
+	animation:animate 8s linear infinite;
+	
+}
+*/
+
+/*----------rgister btn effect ends-------------------------*/
+
+
+
+
+
+
+
+
+
+.admin-login {/*admin login btn */
+
+  padding: 15px 30px;
+  color: #2196f3;
+  /*text-transform:uppercase;*/
+  Letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 14px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.admin-login:hover {/*admin login btn on hover */
+   background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay:0.5s; 
+}  
+
+   .admin-login span {/*to set the animation on edges of navbar */
+  position:absolute;
+  display: block;
+}   
+  
+	/*to set the animation on edges of navbar................. */
+.admin-login span:nth-child(1) {
+  top: 0px;
+  Left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+.admin-login:hover span:nth-child(1) {
+  Left: 100%;
+  transition: 1s;
+}
+
+.admin-login span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+.admin-login:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+	/*transition-delay:0.5s;*/
+}
+     /*...................to set the animation on edges of navbar */
+
+
+
+
+
+  /*conatct us effect----------  */
+
+
+
+.contact ul{
+	position:relative;
+	margin:0;
+	padding:0;
+	display:flex;
+	
+	
+	
+	
+	}
+	
+	
+.contact ul li{
+		position:relative;
+		list-style:none;
+		width:60px;
+		height:60px;
+		margin:0 30px;
+		transform:rotate(-30deg) skew(25deg);
+		background:#ccc;
+		
+  right:25vw;
+    left:25vw;
+	  border-radius:60px;
+	}
+	
+	.contact ul li span{
+		
+		 border-radius:60px;
+		
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background:#000;
+		transition:0.5s;
+		display:flex !important;
+		align-items:center;
+		justify-content:center;
+		color:#fff;
+		font-size:30px !important;
+		
+	}
+	
+	.contact ul li:hover span{
+		box-shadow:-1px 1px 1px 1px rgba(0,0,0,.1);
+	}
+	 .contact ul li:hover span:nth-child(5){
+	 	transform:translate(40px,-40px);
+		opacity:1;
+	 }
+	
+	.contact ul li:hover span:nth-child(4){
+	 	transform:translate(30px,-30px);
+		opacity:0.8;
+	 }
+	 	
+	.contact ul li:hover span:nth-child(3){
+	 	transform:translate(20px,-20px);
+		opacity:0.6;
+	 }
+	 	
+	.contact ul li:hover span:nth-child(2){
+	 	transform:translate(10px,-10px);
+		opacity:0.4;
+	 }
+	 	
+	.contact ul li:hover span:nth-child(1){
+	 	transform:translate(0px,0px);
+		opacity:0.2;
+	 }
+	.contact ul li:nth-child(1) span{
+		background:#3b5999;
+	} 
+	
+	.contact ul li:nth-child(2) span{
+		background:#55acee;
+	} 
+	
+	.contact ul li:nth-child(3) span{
+		background:#dd4b39;
+	} 
+	
+	.contact ul li:nth-child(4) span{
+		background:#0077b5;
+	} 
+	
+	ul li:nth-child(5) span{
+		background:#e4405f;
+	} 
+	
+	 
+	  /*-----conatct us effect ends----------  */
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

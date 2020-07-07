@@ -1,0 +1,147 @@
+<!DOCTYPE html>  
+<html>
+<head>
+  	
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+  <link rel="stylesheet" href="/stylesheets/formstyle.css">
+
+
+	<title>Registration form</title>
+	<style>
+		.left{
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+
+  <!-- FORM -->
+<h3><center>Fill the details</center></h3>
+
+<div class="center">
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+<div>
+    <br>
+	<p>Full Name</p>
+	<input class="box"  id="fname" type="text" name="fname" placeholder="Your Name" required>
+	<br>
+	<p>Mobile</p>
+	<input class="box"  id="no" type="text" name="Mobile num" placeholder="Your Phone Number" required>
+	<br>
+	<p>E-mail</p>
+	<input class="box" id="email" type="text" name="email" placeholder="Your Email Id" required>
+	<br>
+	
+	
+		<p>Gender</p>
+	<center>
+	<div class="rdbutton">
+	<label for="regtype1">
+		<input id="regtype1" type="radio" name="gender" value="Male" > Male&nbsp;&nbsp;&nbsp;</label>
+		<label for="regtype2">
+		<input id="regtype2" type="radio" name="gender" value="Female"> Female&nbsp;&nbsp;&nbsp;</label>
+		<label for="regtype3">
+		<input id="regtype3" type="radio" name="gender" value="Others"> Others&nbsp;&nbsp;&nbsp;</label>
+	</div>
+	</center>
+	
+	<br>
+	<p>Registration type</p>
+ <div class="inputGroup">
+		<input id="radio1" name="people" type="radio"  value="Self"  checked/>
+		<label for="radio1">Self</label>
+	  </div>
+	  <div class="inputGroup">
+		<input id="radio2" name="people" type="radio" value="Group"/>
+		<label for="radio2">Group</label>
+	  </div>
+	  <div class="inputGroup">
+		<input id="radio3" name="people" type="radio" value="Corporation" />
+		<label for="radio3">Corporation</label>
+	  </div>
+	  <div class="inputGroup">
+		<input id="radio4" name="people" type="radio" value="Others"/>
+		<label for="radio4">Others</label>
+	  </div>
+		<br>
+    </div>
+    
+		<p>Number of Tickets</p> 
+		<input class="box" id="tickts" type="text" name="tickets" value="1" required><br>
+		<br>
+		<button class="subbutton" type="submit">Submit</button>
+		
+		<!--button type="button" class="subbutton" id ="btn" onclick="my()"
+	
+	data-toggle="modal" data-target="#myModal">Submit</button-->
+		
+		
+		
+ 
+
+</form>
+</div>
+
+
+
+
+
+<!-- MODAL SCREEN >
+
+<div class="container">
+	
+   <div id="myModal" class="modal fade" data-backdrop="static" role="dialog">
+   	<div class="modal-dialog">
+   	<div class="modal-content">
+   		<div class="modal-header">
+   			<button type="button" class="close" id="cross" data-dismiss="modal">&times;</button>
+   			<h3 class="modal-title"> Preview</h3>
+   		</div>
+   		<div class="modal-body">
+      <center>  
+		<form action="/submit"  method="post" enctype="multipart/form-data">
+			<div class="left">
+            <label for="name" class="nm">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+              <input id="fn"type="text" name="name"  disabled/><br />
+            <label for="email" class="nm">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+              <input id="ml" type="email" name="email"  disabled/><br />
+            <label for="age" class="nm">Phone:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <input id="mb" type="number" name="phone"  disabled/><br />
+              <label for="name" class="nm">Registration Type:&nbsp;&nbsp; </label>
+              <input id="rt"type="text" name="registrationtype"  disabled/><br />
+              <label for="name" class="nm">Tickets: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <input id="tk"type="number" name="tickets"   disabled/><br />
+              <label for="name" class="nm">Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+			  <input id="gn"type="text" name="gender"  disabled/><br />	
+			  <label for="file" class="col-md-3 control-label" style="display: none;">Upload File</label>
+			  <input id="im" type="file" class="form-control" name="file" style=" display:none" required>
+			  </div>
+   		</div>
+   		<div class="modal-footer">
+            <button id="confirm" class="subbutton" type="submit"  value="Upload">Confirm</button>
+   		<button type="button" class="btn-btn-edit" data-dismiss="modal"> Edit
+               </button>	
+            </form>
+   		</div>
+   		</div>
+   		</div>
+   	</div>
+   </div>
+<script src="/javascripts/formmainjs.js"></script-->
+
+
+
+</body>
+</html>
+
+
+
